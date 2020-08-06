@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single"
+        android:id="@+id/leftMenuId">
+    <item
+        android:id="@+id/bio"
+        android:title="Bio"
+        android:icon="@android:drawable/ic_menu_info_details"/>
+    <item
+        android:id="@+id/Vaccination"
+        android:title="Vaccination"
+        android:icon="@android:drawable/ic_menu_edit"/>
+    <item
+        android:id="@+id/Anniversary"
+        android:title="Anniversary"
+        android:icon="@android:drawable/ic_menu_my_calendar"/>
+    </group>
+</menu>
