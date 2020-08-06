@@ -17,7 +17,7 @@ public class DrawerAdapter extends ArrayAdapter<String> {
     private ArrayList<String> drawer;
     private Context context;
     private TextView tv;
-    private ImageView imgV;
+    private ImageView imageView;
 
     public DrawerAdapter(Context context, int resource, ArrayList<String> objects){
         super(context, resource, objects);
@@ -36,22 +36,22 @@ public class DrawerAdapter extends ArrayAdapter<String> {
         // "Inflate" the row.xml as the layout for the View object
         View rowView = inflater.inflate(R.layout.row, parent, false);
         tv = (TextView) rowView.findViewById(R.id.tvTitle);
-        imgV = (ImageView) rowView.findViewById(R.id.imageIcon);
+        imageView = (ImageView) rowView.findViewById(R.id.imageIcon);
 
         String title = drawer.get(position);
         tv.setText(title);
         // Set the TextView to show the food
         if (title.contentEquals("Bio")){
-            imgV.setImageResource(android.R.drawable.ic_dialog_info);
+            imageView.setImageResource(android.R.drawable.ic_dialog_info);
         }
         else if (title.contentEquals("Vaccination")){
-            imgV.setImageResource(android.R.drawable.ic_menu_edit);
+            imageView.setImageResource(android.R.drawable.ic_menu_edit);
         }
         else if (title.contentEquals("Anniversary")){
-            imgV.setImageResource(android.R.drawable.ic_menu_my_calendar);
+            imageView.setImageResource(android.R.drawable.ic_menu_my_calendar);
         }
         else {
-            imgV.setImageResource(android.R.drawable.star_big_on);
+            imageView.setImageResource(android.R.drawable.star_big_on);
         }
         return rowView;
     }
